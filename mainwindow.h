@@ -1,14 +1,22 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QLabel>
+#include <QPushButton>
+#include "counter.h"
 
-class MainWindow : public QMainWindow
+class MainWindow final : public QWidget
 {
     Q_OBJECT
 
+private:
+    QLabel *label1, *label2;
+    Counter *edit1, *edit2;
+    QPushButton *calcButton;
+    QPushButton *exitButton;
+
+    void generateGUI();
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
 };
 #endif // MAINWINDOW_H
