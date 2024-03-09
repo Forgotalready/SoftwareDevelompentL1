@@ -6,8 +6,12 @@ void MainWindow::generateGUI()
     setWindowTitle("Счетчик");
     label1 = new QLabel("Счет по 1", this);
     label2 = new QLabel("Счет по 5", this);
+
     edit1 = new Counter("0", this);
     edit2 = new Counter("0", this);
+    edit1 -> setReadOnly(true);
+    edit2 -> setReadOnly(true);
+
     calcButton = new QPushButton("+1", this);
     exitButton = new QPushButton("Выход", this);
 
