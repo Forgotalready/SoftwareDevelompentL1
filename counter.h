@@ -7,9 +7,10 @@
 class Counter final : public QLineEdit
 {
     Q_OBJECT
+private:
+    std::optional<int> counter = std::nullopt;
 public:
     Counter(const QString& contents, QWidget *parent = nullptr);
-    std::optional<int> counter = std::nullopt;
 signals:
     void tick_signal();
 public slots:
