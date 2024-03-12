@@ -40,21 +40,21 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(
         calcButton,
-        SIGNAL(clicked(bool)),
+        &QPushButton::clicked,
         edit1,
-        SLOT(add_one())
+        &Counter::add_one
     );
     connect(
         edit1,
-        SIGNAL(tick_signal()),
+        &Counter::tick_signal,
         edit2,
-        SLOT(add_one())
+        &Counter::add_one
     );
     connect(
         exitButton,
-        SIGNAL(clicked(bool)),
+        &QPushButton::clicked,
         this,
-        SLOT(close())
+        &MainWindow::close
     );
 }
 
