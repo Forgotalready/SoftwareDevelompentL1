@@ -10,7 +10,7 @@ void Counter::add_one()
     QString str = text(); // Обращаемся к методу унаследованному от QLineEdit
     int r = str.toInt();
     r++;
-    if(r == std::numeric_limits<int>::max()){
+    if(r == std::numeric_limits<int>::max()){ // 2147483647
         QMessageBox msgBox(
             QMessageBox::Information,
             "Счётчик",
