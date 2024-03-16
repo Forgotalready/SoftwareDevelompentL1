@@ -1,7 +1,6 @@
 #ifndef COUNTER_H
 #define COUNTER_H
 
-#include <optional>
 #include <QLineEdit>
 
 class Counter final : public QLineEdit

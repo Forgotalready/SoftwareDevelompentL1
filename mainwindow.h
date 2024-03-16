@@ -15,7 +15,7 @@ private:
     QPushButton *calcButton;
     QPushButton *exitButton;
 
-    void generateGUI();
+    void generateGUI() noexcept;
 public:
     MainWindow(QWidget *parent = nullptr);
 };
