@@ -13,9 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(
         btn,
-        SIGNAL(clicked(bool)),
+        &QPushButton::clicked,
         this,
-        SLOT(close())
+        &MainWindow::close
     );
 }
 
